@@ -1,0 +1,32 @@
+<app-header
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/rei_logo.png', height: 25, alt: 'CoreUI Logo'}"
+  [sidebarToggler]="false"
+  [asideMenuToggler]="false">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">РЕЙ Analytics</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+  </ul>
+</app-header>
+<div class="app-body">
+  <app-sidebar [fixed]="true" [display]="false">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="true"></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+
+    <div class="container-fluid mt-4">
+      <router-outlet></router-outlet>
+    </div><!-- /.container-fluid -->
+  </main>
+
+</div>
+<app-footer>
+  <span><a href="#">РЭЙ</a> &copy; 2018 VK Hackathon .</span>
+  <span class="ml-auto">Powered by <a href="#">Traffox Team</a></span>
+</app-footer>
